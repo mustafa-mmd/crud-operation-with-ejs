@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ejs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-10">
+  <a href="/read" class="p-4 text-white bg-blue-400 rounded-lg font-bold">Read All Users</a>
+
+  <form action="/create" method="post" class="mt-7 space-y-2 flex flex-col">
+    <input type="text" name="name" placeholder="Enter your name" required class="border p-2">
+    <input type="email" name="email" placeholder="Enter your email" required class="border p-2">
+    <input type="number" name="age" placeholder="Enter your age" required class="border p-2">
+    <input type="text" name="image" placeholder="Enter your image URL" required class="border p-2">
+    <input type="submit" value="Submit" class="bg-blue-500 text-white p-2 rounded">
+  </form>
+</body>
+</html>

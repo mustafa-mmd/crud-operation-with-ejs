@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>update ejs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-10">
+  <!-- <a href="/read" class="p-4 text-white bg-blue-400 rounded-lg font-bold">Read All Users</a> -->
+<h1 class="text-2xl font-bold text-center mb-6">Update User</h1>
+  <form action="/update/<%=user._id%>" method="post" class="mt-7 space-y-2 flex flex-col">
+    <input type="text" name="name" value="<%=user.name %>" placeholder="Enter your name" required class="border p-2">
+    <input type="email" name="email" value="<%=user.email %>" placeholder="Enter your email" required class="border p-2">
+
+    <input type="number" name="age" value="<%=user.age %>" placeholder="Enter your age" required class="border p-2">
+
+    <input type="text" name="image" value="<%=user.image %>" placeholder="Enter your image URL" required class="border p-2">
+
+    <input type="submit" value="updateUser" class="bg-yellow-500 text-black p-2 rounded">
+  </form>
+</body>
+</html>
