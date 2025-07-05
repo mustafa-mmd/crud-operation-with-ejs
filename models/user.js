@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost:27017/UserTestappWithEJS");
+require('dotenv').config();
+mongoose.connect(process.env.MONGO_URL).then(() => {
+  console.log('Connected to MongoDB Atlas');
+}).catch(err => {
+  console.error('MongoDB Atlas connection error:', err);
+});
 const userSchema = new mongoose.Schema({
   image: {
         type: String,
