@@ -9,10 +9,12 @@ const Path=require('path');
 const user = require('./models/user');
 const { prototype } = require('events');
 import { fileURLToPath } from "url";
-
+import serverless from 'serverless-http';
 // Vercel requires ES Modules, so we get __dirname this way
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+
 app.use(express.static(Path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.get('/',(req,res)=>{
